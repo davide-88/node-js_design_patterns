@@ -41,9 +41,8 @@ describe('consoleTimeStamped', () => {
       const messages = [null, [null], ['text message'], ['array', 'messages']]
       messages.forEach(msg => {
         const fullMsg = msg && msg.join(' ')
-        const timeStampedMsgRegExp = new RegExp(
-          '\\[[0-9]{0,4}-[0-9]{0,2}-[0-9]{0,2}T[0-9]{0,2}:[0-9]{0,2}:[0-9]{0,2}.[0-9]{0,3}Z\\]'
-        )
+        const timeStampedMsgRegExp =
+          /\[[0-9]{0,4}-[0-9]{0,2}-[0-9]{0,2}T[0-9]{0,2}:[0-9]{0,2}:[0-9]{0,2}.[0-9]{0,3}Z\]/
         it(`should prepend a the timestamp to the message: '${fullMsg}'`, () => {
           if (msg) {
             timeStampedConsole[method](...msg)

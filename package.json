@@ -4,7 +4,10 @@
   "description": "",
   "scripts": {
     "clean": "rm -rf node_modules coverage",
+    "lint": "./node_modules/.bin/eslint .",
+    "lint-fix": "./node_modules/.bin/eslint . --fix",
     "test": "./node_modules/.bin/mocha --parallel ./**/test/**/*.spec.js",
+    "test-watch": "./node_modules/.bin/mocha --parallel ./**/test/**/*.spec.js --watch",
     "coverage-report": "./node_modules/.bin/c8 --clean -r html npm test",
     "coverage-report-ci": "./node_modules/.bin/c8 --clean -r lcovonly npm test",
     "coverage-report-text": "./node_modules/.bin/c8 --clean -r text-summary npm test"
@@ -21,10 +24,17 @@
   },
   "homepage": "https://github.com/davide-88/node-js_design_patterns#readme",
   "devDependencies": {
-    "mocha": "^9.0.3",
-    "sinon": "^11.1.2",
+    "@babel/core": "^7.15.0",
+    "@babel/eslint-parser": "^7.15.0",
+    "c8": "^7.8.0",
     "chai": "^4.3.4",
-    "c8": "^7.8.0"
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.24.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "mocha": "^9.0.3",
+    "sinon": "^11.1.2"
   },
   "type": "module"
 }
