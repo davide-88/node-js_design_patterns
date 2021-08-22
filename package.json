@@ -1,0 +1,25 @@
+{
+  "name": "node-js_design_patterns",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --parallel ./**/test/**/*.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davide-88/node-js_design_patterns.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davide-88/node-js_design_patterns/issues"
+  },
+  "homepage": "https://github.com/davide-88/node-js_design_patterns#readme",
+  "devDependencies": {
+    "mocha": "^9.0.3",
+    "sinon": "^11.1.2",
+    "chai": "^4.3.4"
+  },
+  "type": "module"
+}
