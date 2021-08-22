@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --parallel ./**/test/**/*.spec.js"
+    "test": "./node_modules/.bin/mocha --parallel ./**/test/**/*.spec.js",
+    "coverage-report": "./node_modules/.bin/c8 --clean -r html npm test",
+    "coverage-report-ci": "./node_modules/.bin/c8 --clean -r lcovonly npm test",
+    "coverage-report-text": "./node_modules/.bin/c8 --clean -r text-summary npm test"
   },
   "repository": {
     "type": "git",
@@ -19,7 +22,8 @@
   "devDependencies": {
     "mocha": "^9.0.3",
     "sinon": "^11.1.2",
-    "chai": "^4.3.4"
+    "chai": "^4.3.4",
+    "c8": "^7.8.0"
   },
   "type": "module"
 }
