@@ -6,8 +6,7 @@
     "clean": "rm -rf node_modules coverage",
     "lint": "./node_modules/.bin/eslint .",
     "lint-fix": "./node_modules/.bin/eslint . --fix",
-    "test": "./node_modules/.bin/mocha --parallel ./**/test/**/*.spec.js",
-    "test-watch": "./node_modules/.bin/mocha --parallel ./**/test/**/*.spec.js --watch",
+    "test": "./node_modules/.bin/lerna bootstrap && ./node_modules/.bin/lerna run test",
     "coverage-report": "./node_modules/.bin/c8 --clean -r html npm test",
     "coverage-report-ci": "./node_modules/.bin/c8 --clean -r lcovonly npm test",
     "coverage-report-text": "./node_modules/.bin/c8 --clean -r text-summary npm test",
@@ -35,6 +34,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
     "husky": "^7.0.1",
+    "lerna": "^4.0.0",
     "lint-staged": "^11.1.2",
     "mocha": "^9.0.3",
     "sinon": "^11.1.2"
@@ -42,8 +42,7 @@
   "type": "module",
   "lint-staged": {
     "*.js": [
-      "eslint --cache --fix",
-      "git add"
+      "eslint --cache --fix"
     ]
   }
 }

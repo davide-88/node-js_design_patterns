@@ -2,7 +2,7 @@ import { describe, it } from 'mocha'
 import chai from 'chai'
 import { createWarehouseItem } from '../src/WarehouseItem.js'
 import { WarehouseItemStates } from '../src/WarehouseItemState.js'
-import { randomUUID } from 'crypto'
+import randomUUID from 'uuid-random'
 
 const assert = chai.assert
 

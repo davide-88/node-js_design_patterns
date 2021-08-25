@@ -1,0 +1,7 @@
+{
+  "packages": [
+    "08-structural-design-patterns/*",
+    "09-behavioral-design-patterns/*"
+  ],
+  "version": "0.0.0"
+}

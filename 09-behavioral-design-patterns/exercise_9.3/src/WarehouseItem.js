@@ -1,5 +1,5 @@
 import { WarehouseItemStates } from './WarehouseItemState.js'
-import { randomUUID } from 'crypto'
+import randomUUID from 'uuid-random'
 
 export function createWarehouseItem (options) {
   return new WarehouseItem(options)
