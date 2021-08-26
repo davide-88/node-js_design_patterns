@@ -5,8 +5,8 @@
   "main": "./src/Logger.js",
   "scripts": {
     "clean": "rm -rf node_modules coverage",
-    "test": "./node_modules/.bin/mocha --parallel",
-    "test:watch": "./node_modules/.bin/mocha --parallel --watch",
+    "test": "mocha --parallel",
+    "test:watch": "mocha --parallel --watch",
     "coverage-report": "./node_modules/.bin/c8 --clean -r html npm test",
     "coverage-report:check": "./node_modules/.bin/c8 --clean check-coverage --lines 100 --per-file npm test",
     "coverage-report:watch": "./node_modules/.bin/nodemon -x \"npm run coverage-report\"",
@@ -15,13 +15,5 @@
   "keywords": [],
   "author": "Davide Mantelli",
   "license": "ISC",
-  "devDependencies": {
-    "c8": "^7.8.0",
-    "chai": "^4.3.4",
-    "live-server": "^1.2.1",
-    "mocha": "^9.0.3",
-    "nodemon": "^2.0.12",
-    "sinon": "^11.1.2"
-  },
   "type": "module"
 }

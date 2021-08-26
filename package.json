@@ -7,8 +7,8 @@
     "clean-all": "./node_modules/.bin/lerna run clean && npm run clean",
     "lint": "./node_modules/.bin/eslint .",
     "lint-fix": "./node_modules/.bin/eslint . --fix",
-
-    "test": "./node_modules/.bin/lerna bootstrap && ./node_modules/.bin/lerna run test",
+    "pretest": "./node_modules/.bin/lerna bootstrap",
+    "test": "./node_modules/.bin/lerna run test",
     "coverage-report": "./node_modules/.bin/c8 --clean -r html npm test",
     "coverage-report-ci": "./node_modules/.bin/c8 --clean -r lcovonly npm test",
     "coverage-report-text": "./node_modules/.bin/c8 --clean -r text-summary npm test",
@@ -38,7 +38,9 @@
     "husky": "^7.0.1",
     "lerna": "^4.0.0",
     "lint-staged": "^11.1.2",
+    "live-server": "^1.2.1",
     "mocha": "^9.0.3",
+    "nodemon": "^2.0.12",
     "sinon": "^11.1.2"
   },
   "type": "module",
@@ -46,5 +48,14 @@
     "*.js": [
       "eslint --cache --fix"
     ]
+  },
+  "dependencies": {
+    "exercise_8.2": "file:08-structural-design-patterns/exercise_8.2",
+    "exercise_8.3": "file:08-structural-design-patterns/exercise_8.3",
+    "exercise_8.4": "file:08-structural-design-patterns/exercise_8.4",
+    "exercise_8.5": "file:08-structural-design-patterns/exercise_8.5",
+    "exercise_9.1": "file:09-behavioral-design-patterns/exercise_9.1",
+    "exercise_9.2": "file:09-behavioral-design-patterns/exercise_9.2",
+    "exercise_9.3": "file:09-behavioral-design-patterns/exercise_9.3"
   }
 }
