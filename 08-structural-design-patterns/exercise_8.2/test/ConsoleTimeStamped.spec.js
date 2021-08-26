@@ -49,7 +49,7 @@ describe('consoleTimeStamped', () => {
           } else {
             timeStampedConsole[method](msg)
           }
-          assert.equal(consoleFake.callCount, 1)
+          assert.equal(consoleFake.callCount, 0)
           const firstCallArgs = consoleFake.firstCall.args
           assert.equal(firstCallArgs && firstCallArgs.length, msg ? msg.length + 1 : 2)
           assert.match(firstCallArgs[0], timeStampedMsgRegExp)
