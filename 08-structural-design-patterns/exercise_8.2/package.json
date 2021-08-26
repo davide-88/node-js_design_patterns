@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test-watch": "./node_modules/.bin/mocha --parallel --watch",
+    "clean": "rm -rf node_modules coverage",
+    "test:watch": "./node_modules/.bin/mocha --parallel --watch",
     "test": "./node_modules/.bin/mocha --parallel",
-    "coverage-check": "./node_modules/.bin/c8 --clean check-coverage --lines 100 --per-file npm test",
+    "coverage-report:check": "./node_modules/.bin/c8 --clean check-coverage --lines 100 --per-file npm test",
     "coverage-report": "./node_modules/.bin/c8 --clean -r html npm test",
-    "coverage-report-watch": "./node_modules/.bin/nodemon -x \"npm run coverage-report\"",
-    "coverage-report-serve": "./node_modules/.bin/live-server --open=coverage"
+    "coverage-report:watch": "./node_modules/.bin/nodemon -x \"npm run coverage-report\"",
+    "coverage-report:serve": "./node_modules/.bin/live-server --open=coverage"
   },
   "keywords": [],
   "author": "",

@@ -4,8 +4,10 @@
   "description": "",
   "scripts": {
     "clean": "rm -rf node_modules coverage",
+    "clean-all": "./node_modules/.bin/lerna run clean && npm run clean",
     "lint": "./node_modules/.bin/eslint .",
     "lint-fix": "./node_modules/.bin/eslint . --fix",
+
     "test": "./node_modules/.bin/lerna bootstrap && ./node_modules/.bin/lerna run test",
     "coverage-report": "./node_modules/.bin/c8 --clean -r html npm test",
     "coverage-report-ci": "./node_modules/.bin/c8 --clean -r lcovonly npm test",
